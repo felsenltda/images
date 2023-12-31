@@ -1451,7 +1451,7 @@ services:
         - traefik.http.routers.chatwoot_app.middlewares=sslheader@docker
 
   chatwoot_sidekiq:
-    image: chatwoot/chatwoot:latest
+    image: chatwoot/chatwoot:v3.3.1
     command: bundle exec sidekiq -C config/sidekiq.yml
     volumes:
       - chatwoot_data:/app/storage
